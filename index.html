@@ -2,12 +2,36 @@
 <html lang='en'>
 
 <head>
-  <meta charset='utf8'>
+  <meta charset='utf-8'>
   <title>Debugging: project, week 1</title>
   <!-- Leave this here!  It renders the review buttons  -->
   <script src='./review-buttons/init.js'></script>
+
+  <script src='./scripts/confirm-ending.js'></script>
+  <script src='./scripts/convert-to-celsius.js'></script>
+  <script src='./scripts/convert-to-fahrenheit.js'></script>
+  <script src='./scripts/find-longest-word-length.js'></script>
+  <script src='./scripts/repeat-string-num-times.js'></script>
+  <script src='./scripts/reverse-a-string.js'></script>
+  
 </head>
 
-<body></body>
+<body>
+
+  <section>
+    <h1>
+      Click on these buttons to find out how we debug on JavaScript!
+    </h1>
+    <div>
+      <button onclick='confirmEndingHandler()'>Confirm Endings</button>
+      <button onclick='convertToCelsiusHandler()'>Fahrenheit to Celsius</button>
+      <button onclick='convertToFahrenheitHandler()'>Celsius to Fahrenheit</button>
+      <button onclick='findLongestWordLengthHandler()'>Your Longest Word</button>
+      <button onclick='repeatStringNumTimesHandler()'>Repeat String</button>
+      <button onclick='reverseStringHandler()'>Reverse a String</button>
+    </div>
+  </section>
+
+</body>
 
 </html>
