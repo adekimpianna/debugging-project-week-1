@@ -3,7 +3,11 @@
 console.log('-- loading: convertToFahrenheit');
 
 
-function convertToFahrenheit() { }
+function convertToFahrenheit(celsius) { 
+
+  const fahrenheit = celsius * 1.8 + 32 ;
+  return fahrenheit;
+}
 
 
 {
@@ -46,11 +50,22 @@ function convertToFahrenheitHandler() {
   debugger;
 
   // read user input
+  const celsius = prompt('Please enter the temperature in Celsius');
+
+  if ( typeof celsius !== 'string') { throw new TypeError();};
 
   // core logic
-  const result = convertToFahrenheit(c);
+  const result = convertToFahrenheit(celsius);
+  const message = `${celsius} degrees in Celsius is equal to ${result} degrees in Fahrenheit.`
 
   // display for use
+  
+  alert(message);
 
   // log for developers
+  console.log('\n--- findLongestWordLength ---');
+  console.log('celsius:', typeof celsius, '\n', celsius);
+  console.log('result:', typeof result, '\n', result);
+  console.log('message:', typeof message, '\n', message);
+
 }
