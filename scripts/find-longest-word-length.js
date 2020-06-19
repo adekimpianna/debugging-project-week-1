@@ -3,7 +3,19 @@
 console.log('-- loading: findLongestWordLength');
 
 
-function findLongestWordLength() { }
+function findLongestWordLength(aSentence) { 
+
+  const singleWord = aSentence.split(" ");
+  const longestWord = singleWord.reduce(function(longest, currentWord) {
+    if(currentWord.length > longest.length)
+       return currentWord;
+    else
+       return longest;
+  }, "");
+
+  const countLongestWord = longestWord.length;
+  return countLongestWord;
+}
 
 
 {
@@ -41,12 +53,23 @@ function findLongestWordLengthHandler() {
   debugger;
 
   // read user input
+  const aSentence = prompt(`We count the characters of your longest word. \nType here a long sentence, please!`);
+
+  if ( typeof aSentence !== 'string') { throw new TypeError();};
 
   // core logic
-  const result = findLongestWordLength(str);
+  const result = findLongestWordLength(aSentence);
+  const message = `Your longest word from that sentence has ${result} characters.`
 
   // display for use
 
+  alert(message);
+
   // log for developers
+  console.log('\n--- findLongestWordLength ---');
+  console.log('aSentence:', typeof aSentence, '\n', aSentence);
+  console.log('result:', typeof result, '\n', result);
+  console.log('message:', typeof message, '\n', message);
+
 }
 
