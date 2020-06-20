@@ -3,7 +3,12 @@
 console.log('-- loading: reverseString');
 
 
-function reverseString() { }
+function reverseString(x) {
+let result;
+result= String (x);
+result= result.split('').reverse().join('');
+return result;
+ }
 
 
 {
@@ -46,12 +51,14 @@ function reverseStringHandler() {
   debugger;
 
   // read user input
-
+  let str;
+  str=prompt("Write a string for reverse");
   // core logic
   const result = reverseString(str);
-
+  
   // display for use
-
+  alert(result);
   // log for developers
+  console.log(result);
 }
 
