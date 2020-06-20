@@ -3,9 +3,10 @@
 console.log('-- loading: confirmEnding');
 
 
-function confirmEnding() { }
-
-
+function confirmEnding(arg_1, arg_2) {
+let result= arg_1.endsWith(arg_2)
+return result;
+}
 {
   console.log('-- testing: confirmEnding ');
   debugger;
@@ -63,13 +64,20 @@ function confirmEnding() { }
 
 function confirmEndingHandler() {
   debugger;
-
+  
   // read user input
-
+  let str = prompt('Write first word');
+  let ending = prompt('Second Word');
   // core logic
   const result = confirmEnding(str, ending);
-
+  let message = (result==true) ? `TRUE! ${str} is ending with ${ending}`:`Wrong! ${str} is not ending with ${ending}`;
+    
   // display for use
-
+  alert(message);
   // log for developers
+  console.log(str);
+  console.log(ending);
+  console.log(result);
+  console.log(message);
 }
+
