@@ -3,7 +3,11 @@
 console.log('-- loading: convertToCelsius');
 
 
-function convertToCelsius() { }
+function convertToCelsius(x) { 
+let result;
+result= (x-32)*5/9;
+return result;
+}
 
 
 {
@@ -17,7 +21,7 @@ function convertToCelsius() { }
 
   const _2_arg = 14;
   const _2_expect = -10;
-  const _2_actual = convertToC(_2_arg);
+  const _2_actual = convertToCelsius(_2_arg);
   console.assert(_2_actual === _2_expect, 'Test 2');
 
   const _3_arg = 32;
@@ -46,11 +50,16 @@ function convertToCelsiusHandler() {
   debugger;
 
   // read user input
-
+  let resultFahrenheit;
+  resultFahrenheit= prompt ('Please enter the temperature in Fahrenheit:')
   // core logic
-  const result = convertToCelsius(f);
-
+  const result = convertToCelsius(resultFahrenheit);
+  const message = `${resultFahrenheit} degrees in Fahrenheit is equal to ${result} degrees in Celsius.`
   // display for use
-
+  alert(message);
   // log for developers
+  console.log('\n--- convertToCelcius ---');
+  console.log(resultFahrenheit);
+  console.log(result);
+  console.log(message);
 }
