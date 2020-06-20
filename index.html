@@ -13,25 +13,64 @@
   <script src='./scripts/find-longest-word-length.js'></script>
   <script src='./scripts/repeat-string-num-times.js'></script>
   <script src='./scripts/reverse-a-string.js'></script>
+
+  <link rel="stylesheet" href="./css/flexboxgrid.css">
+  <link rel="stylesheet" href="./css/style.css">
   
 </head>
 
 <body>
+  <div class="page-wrapper">
 
-  <section>
-    <h1>
-      Click on these buttons to find out how we debug on JavaScript!
-    </h1>
-    <div>
-      <button onclick='confirmEndingHandler()'>Confirm Endings</button>
-      <button onclick='convertToCelsiusHandler()'>Fahrenheit to Celsius</button>
-      <button onclick='convertToFahrenheitHandler()'>Celsius to Fahrenheit</button>
-      <button onclick='findLongestWordLengthHandler()'>Your Longest Word</button>
-      <button onclick='repeatStringNumTimesHandler()'>Repeat String</button>
-      <button onclick='reverseStringHandler()'>Reverse a String</button>
-    </div>
-  </section>
+    <header>
+      <div class="container">
+        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>Click on these buttons to find out how we debug on JavaScript!</h1>
+          </div>
+       </div>
+      </div>
+    </header>
+  
+    <section>
+      <div class="container">
+        <h2>Enjoy &#x263A; </h2>
+          <div class="row center-xs center-sm center-md center-md middle-xs middle-sm middle-md middle-lg">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div>
+                  <button class="button-small" onclick='confirmEndingHandler()'>Confirm Endings</button>
+                </div>
+                <div>
+                  <button class="button-big yellow" onclick='convertToCelsiusHandler()'>Fahrenheit to Celsius</button>
+                </div>
+                <div>
+                  <button class="button-big blue" onclick='convertToFahrenheitHandler()'>Celsius to Fahrenheit</button>
+                </div>
+                <div>
+                  <button class="button-big pink" onclick='findLongestWordLengthHandler()'>Your Longest Word</button>
+                </div>
+                <div>
+                  <button class="button-big green" onclick='repeatStringNumTimesHandler()'>Repeat String</button>
+                </div>
+                <div>
+                  <button class="button-small" onclick='reverseStringHandler()'>Reverse a String</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  
+    <footer>
+      <div class="container">
+        <div class="row center-xs center-sm center-md center-lg">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p>Copyright &copy; 2020 | Yana, Harun and Miroslav (from HFY Brussels)</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
+  </div>
 </body>
 
 </html>
